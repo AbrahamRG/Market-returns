@@ -130,16 +130,6 @@ if __name__ == '__main__':
     x_test = x[train_data_len : ]
     y_test = y[train_data_len : ]
 
-    # Scale the data
-    #scaler_x = MinMaxScaler(feature_range=(0,1)).fit_transform(x)
-    #scaler_y = MinMaxScaler(feature_range=(0,1)).fit_transform(y)
-
-    #x_train = scaler_x[0:train_data_len, :]
-    #y_train = scaler_y[0:train_data_len, :]
-
-    #Create teh data sets test
-    #x_test = scaler_x[train_data_len : ]
-    #y_test = y[train_data_len : ]
 
     print("="*80)
     print(x_test.shape)
@@ -176,8 +166,8 @@ if __name__ == '__main__':
     print("Linear Regression  ||  MSE: {}  |  R^2: {}%".format(round(linear_loss, 6), round(linear_score, 2)))
     print("Lasso Regression   ||  MSE: {}  |  R^2: {}%".format(round(lasso_loss, 6), round(lasso_score, 2)))
     print("Ridge Regression   ||  MSE: {}  |  R^2: {}%".format(round(ridge_loss, 6), round(ridge_score, 2)))
-    print("Elastic Regression ||  MSE: {}  |  R^2: {}%".format(round(elastic_loss, 6), round(elastic_loss, 2)))
-    print("Huber Regression   ||  MSE: {}  |  R^2: {}%".format(round(huber_loss, 6), round(huber_loss, 2)))
+    print("Elastic Regression ||  MSE: {}  |  R^2: {}%".format(round(elastic_loss, 6), round(elastic_score, 2)))
+    print("Huber Regression   ||  MSE: {}  |  R^2: {}%".format(round(huber_loss, 6), round(huber_score, 2)))
 
 
     print("="*80)
